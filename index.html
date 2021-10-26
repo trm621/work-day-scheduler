@@ -18,7 +18,10 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/style.css"/>
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css"/>
     <title>Work Day Scheduler</title>
   </head>
 
@@ -28,54 +31,55 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container d-flex">
-      <div class="row justify-content-around">
-        <p class="col-1 m-auto">8 AM</p>
-        <div class="col-10 bg-secondary mb-2 p-5">
-          </div>
-          <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"></button>
-        <p class="col-1 m-auto">9 AM</p>
-        <div class="col-10 bg-secondary mb-2 p-5">
-          </div>
-          <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"></button>
-        <p class="col-1 m-auto">10 AM</p>
-        <div class="col-10 bg-secondary mb-2 p-5 ">
-          </div>
-          <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"></button>
-        <p class="col-1 m-auto">11 AM</p>
-        <div class="col-10 bg-secondary mb-2 p-5">
-          </div>
-          <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"></button>
-        <p class="col-1 m-auto">12 PM</p>
-        <div class="col-10 bg-secondary mb-2 p-5">
-          </div>
-          <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"></button>
-        <p class="col-1 m-auto">1 PM</p>
-        <div class="col-10 bg-secondary mb-2 p-5">
-          </div>
-          <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"></button>
-        <p class="col-1 m-auto">2 PM</p>
-        <div class="col-10 bg-secondary mb-2 p-5">
-          </div>
-          <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"></button>
-        <p class="col-1 m-auto">3 PM</p>
-        <div class="col-10 bg-secondary mb-2 p-5">
-          </div>
-          <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"></button>
-        <p class="col-1 m-auto">4 PM</p>
-        <div class="col-10 bg-secondary mb-2 p-5">
-          </div>
-          <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"></button>
-        <p class="col-1 m-auto">5 PM</p>
-        <div class="col-10 bg-secondary mb-2 p-5">
-          </div>
-          <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"></button>
-      </div>
-      <!-- Timeblocks go here -->
-    </div>
+    
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-1 m-auto">8 AM</div>
+          <p id="textContainer" class="col-10 bg-secondary mb-2 p-5"></p>
+            <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"><span class="oi oi-lock-locked"></span></button>
 
+        <div class="col-1 m-auto">9 AM</div>
+          <p id="textContainer" class="col-10 bg-secondary mb-2 p-5"></p>
+            <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"><span class="oi oi-lock-locked"></span></button>
+
+        <div class="col-1 m-auto">10 AM</div>
+          <p id="textContainer" class="col-10 bg-secondary mb-2 p-5"></p>
+            <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"><span class="oi oi-lock-locked"></span></button>
+
+        <div class="col-1 m-auto">11 AM</div>
+          <p id="textContainer" class="col-10 bg-secondary mb-2 p-5"></p>
+            <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"><span class="oi oi-lock-locked"></span></button>
+
+        <div class="col-1 m-auto">12 PM</div>
+          <p id="textContainer" class="col-10 bg-secondary mb-2 p-5"></p>
+            <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"><span class="oi oi-lock-locked"></span></button>
+
+        <div class="col-1 m-auto">1 PM</div>
+          <p id="textContainer" class="col-10 bg-secondary mb-2 p-5"></p>
+            <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"><span class="oi oi-lock-locked"></span></button>
+
+        <div class="col-1 m-auto">2 PM</div>
+          <p id="textContainer" class="col-10 bg-secondary mb-2 p-5"></p>
+            <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"><span class="oi oi-lock-locked"></span></button>
+
+        <div class="col-1 m-auto">3 PM</div>
+          <p id="textContainer" class="col-10 bg-secondary mb-2 p-5"></p>
+            <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"><span class="oi oi-lock-locked"></span></button>
+
+        <div class="col-1 m-auto">4 PM</div>
+          <p id="textContainer" class="col-10 bg-secondary mb-2 p-5"></p>
+            <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"><span class="oi oi-lock-locked"></span></button>
+
+
+        <div class="col-1 m-auto">5 PM</div>
+          <p id="textContainer" class="col-10 bg-secondary mb-2 p-5"></p>
+            <button id="save-button" class="col-1 bg-primary mb-2 rounded-right"><span class="oi oi-lock-locked"></span></button>
+      </div>
+    </div>
+    </div>
+  
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/js/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

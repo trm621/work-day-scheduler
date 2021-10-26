@@ -2,11 +2,8 @@ var tasks = {};
 
 var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
-}
+};
 
-var currentDay = moment().format("MMMM Do, YYYY");
-
-console.log("currendDay");
-
-$(".row").append(".container");
-
+$(".container #textContainer").on("click", function() {
+    console.log("this was clicked!");
+});
