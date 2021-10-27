@@ -9,12 +9,20 @@ var loadTasks = function() {
     console.log(tasks);
 };
 
+var auditTask = function(taskObj) {
+
+}
+
 $(".save-button").on("click", function() {
     var textAreaVal = $(this).siblings("textarea").val();
     var textAreaId = $(this).attr("id");
-    var taskObj = {textAreaVal, textAreaId}
-   tasks.push(taskObj);
+   tasks.push({
+       text: textAreaVal,
+       time: textAreaId
+   });
    saveTasks(textAreaVal, textAreaId)
 });
+
+
 
 loadTasks();
