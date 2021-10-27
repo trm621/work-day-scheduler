@@ -4,24 +4,12 @@ var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
-var loadTasks = function() {
-    tasks = JSON.parse(localStorage.getItem("tasks"));
-}
-
-$(".container #textContainer").on("click", function() {
-    var text = $(this).text();
-    var textInput = $("<textarea>")
-    .addClass("form-control col-10 text-light bg-secondary mb-2 p-4")
-    .val(text);
-
-    $(this).replaceWith(textInput);
-    tasks.push({
-        text: $(textInput)
-    });
+$(".save-button").on("click", function() {
+    var textAreaVal = $(this).siblings("textarea").val();
+    var textAreaId = $(this).attr("id");
+    var taskObj = {textAreaVal, textAreaId}
+   tasks.push(taskObj);
+   saveTasks(textAreaVal, textAreaId)
 });
 
-$(".container #save-button").on("click", function() {
-    saveTasks();
-});
-
-loadTasks();
+//loadTasks();
