@@ -30,8 +30,10 @@ var loadTasks = function() {
     $("#fivePm").siblings("textArea").val(fiveOclock);
 };
 
-var auditTask = function(tasks) {
-}
+$("#clearButton").on("click", function() {
+    localStorage.clear();
+    $(".save-button").siblings("textarea").val("");
+});
 
 $(".save-button").on("click", function() {
     var textAreaVal = $(this).siblings("textarea").val().trim();
@@ -39,7 +41,7 @@ $(".save-button").on("click", function() {
     localStorage.setItem("" + textAreaId, textAreaVal);
 });
 
-$("#currentDay").append(moment().format("dddd, MMMM Do YYYY"));
- 
+$("#currentDay").append("Today is " + moment().format("dddd, MMMM Do YYYY"));
+
 loadTasks();
 
