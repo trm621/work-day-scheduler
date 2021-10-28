@@ -39,4 +39,7 @@ $(".save-button").on("click", function() {
     localStorage.setItem("" + textAreaId, textAreaVal);
 });
 
+$("#currentDay").append(moment().format("dddd, MMMM Do YYYY"));
+ 
 loadTasks();
+
