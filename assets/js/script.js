@@ -1,3 +1,5 @@
+// upon loading the page, any items in the localstorage will persist on the page
+
 var loadTasks = function() {
     eightOclock = localStorage.getItem("eightAm")
     $("#eightAm").siblings("textArea").val(eightOclock);
@@ -30,16 +32,22 @@ var loadTasks = function() {
     $("#fivePm").siblings("textArea").val(fiveOclock);
 };
 
+// when this button is clicked, the calendar will clear and the localStorage will be emptied
+
 $("#clearButton").on("click", function() {
     localStorage.clear();
     $(".save-button").siblings("textarea").val("");
 });
+
+// when the blue lock button is clicked, the task will persistently save to its corresponding time slot 
 
 $(".save-button").on("click", function() {
     var textAreaVal = $(this).siblings("textarea").val().trim();
     var textAreaId = $(this).attr("id").trim();
     localStorage.setItem("" + textAreaId, textAreaVal);
 });
+
+// will display the current date
 
 $("#currentDay").append("Today is " + moment().format("dddd, MMMM Do YYYY"));
 
