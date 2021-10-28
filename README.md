@@ -12,7 +12,7 @@ JavaScript
 https://trm621.github.io/work-day-scheduler/
 
 ## Screenshot
-![imgur]https://i.imgur.com/W9ojpcT.png/
+![imgur](https://i.imgur.com/W9ojpcT.png)
 
 ## Made By
 Thomas Maher
