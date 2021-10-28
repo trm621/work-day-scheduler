@@ -6,11 +6,10 @@ var saveTasks = function() {
 
 var loadTasks = function() {
     tasks = JSON.parse(localStorage.getItem("tasks"));
-    console.log(tasks);
     for (var i = 0; i < tasks.length; i++)
-    if (tasks[i].time === eightAm) {
-        textArea.append(eightAm)
-    }
+    if (tasks[i].time = eightAm) {
+        $("#eightAm").siblings("textarea").val(tasks[i].text)
+    };
 };
 
 var auditTask = function(tasks) {
