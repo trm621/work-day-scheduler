@@ -49,7 +49,7 @@ $(".save-button").on("click", function() {
 
 // will display the current date
 
-$("#currentDay").append("Today is " + moment().format("dddd, MMMM Do YYYY"));
+$("#currentDay").append("Today is " + moment().format("dddd, MMMM Do YYYY") + ".");
 
 loadTasks();
 
