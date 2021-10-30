@@ -32,10 +32,22 @@ var loadTasks = function() {
     $("#fivePm").siblings("textarea").val(fiveOclock);
 };
 
+var beginningOfWorkDay = moment().hour(8);
+
 var auditTasks = function() {
-    if (moment("hour").isAfter("hour", 8)) {
-        $("#eightAm").siblings(".textContainer").addClass("bg-danger")
+//     var a = (moment().hour())
+//     if (a < moment().hour()) {
+//         $(".textContainer").addClass("bg-success");
+//     };
+
+// };
+
+var currentTime = moment();
+    
+    if (currentTime === moment().isAfter(hours(8))) {
+        $("#eightAm").siblings("textarea").addClass("bg-success");
     }
+
 };
 
 // when this button is clicked, the calendar will clear and the localStorage will be emptied
@@ -59,9 +71,5 @@ $("#currentDay").append("Today is " + moment().format("dddd, MMMM Do YYYY") + ".
 
 loadTasks();
 
-setInterval(function() {
-    $("textarea").each(function() {
-        auditTasks($(this));
-    });
-}, 100);
+auditTasks();
 
