@@ -2,34 +2,40 @@
 
 var loadTasks = function() {
     eightOclock = localStorage.getItem("eightAm")
-    $("#eightAm").siblings("textArea").val(eightOclock);
+    $("#eightAm").siblings("textarea").val(eightOclock);
 
     nineOclock = localStorage.getItem("nineAm")
-    $("#nineAm").siblings("textArea").val(nineOclock);
+    $("#nineAm").siblings("textarea").val(nineOclock);
 
     tenOclock = localStorage.getItem("tenAm")
-    $("#tenAm").siblings("textArea").val(tenOclock);
+    $("#tenAm").siblings("textarea").val(tenOclock);
 
     elevenOclock = localStorage.getItem("elevenAm")
-    $("#elevenAm").siblings("textArea").val(elevenOclock);
+    $("#elevenAm").siblings("textarea").val(elevenOclock);
 
     twelveOclock = localStorage.getItem("twelvePm")
-    $("#twelvePm").siblings("textArea").val(twelveOclock);
+    $("#twelvePm").siblings("textarea").val(twelveOclock);
 
     oneOclock = localStorage.getItem("onePm")
-    $("#onePm").siblings("textArea").val(oneOclock);
+    $("#onePm").siblings("textarea").val(oneOclock);
 
     twoOclock = localStorage.getItem("twoPm")
-    $("#twoPm").siblings("textArea").val(twoOclock);
+    $("#twoPm").siblings("textarea").val(twoOclock);
 
     threeOclock = localStorage.getItem("threePm")
-    $("#threePm").siblings("textArea").val(threeOclock);
+    $("#threePm").siblings("textarea").val(threeOclock);
     
     fourOclock = localStorage.getItem("fourPm")
-    $("#fourPm").siblings("textArea").val(fourOclock);
+    $("#fourPm").siblings("textarea").val(fourOclock);
 
     fiveOclock = localStorage.getItem("fivePm")
-    $("#fivePm").siblings("textArea").val(fiveOclock);
+    $("#fivePm").siblings("textarea").val(fiveOclock);
+};
+
+var auditTasks = function() {
+    if (moment("hour").isAfter("hour", 8)) {
+        $("#eightAm").siblings(".textContainer").addClass("bg-danger")
+    }
 };
 
 // when this button is clicked, the calendar will clear and the localStorage will be emptied
@@ -52,4 +58,10 @@ $(".save-button").on("click", function() {
 $("#currentDay").append("Today is " + moment().format("dddd, MMMM Do YYYY") + ".");
 
 loadTasks();
+
+setInterval(function() {
+    $("textarea").each(function() {
+        auditTasks($(this));
+    });
+}, 100);
 
