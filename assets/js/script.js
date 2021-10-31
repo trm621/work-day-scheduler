@@ -35,22 +35,24 @@ var loadTasks = function() {
 // will cycle through each task and assign a color to it depending on the time of day
 
 var auditTasks = function() {
-moment();
+    moment();
     var a = moment().hours();
 
-if (moment().hour === 8) {
+    console.log(a);
+
+if (a === 8) {
         $("#eightAm").siblings("textarea").addClass("bg-danger");
     }
-    else if (a > 8) {
+    else if (a < 8) {
         $("#eightAm").siblings("textarea").addClass("bg-success")
     }
     else
         $("#eightAm").siblings("textarea").addClass("bg-dark");
         
-if (moment() === 9) {
+if (a === 9) {
         $("#nineAm").siblings("textarea").addClass("bg-danger");
     } 
-    if (a < 9) {
+    else if (a < 9) {
         $("#nineAm").siblings("textarea").addClass("bg-success");
     }
     else 
@@ -59,82 +61,75 @@ if (moment() === 9) {
 if (a === 10) {
         $("#tenAm").siblings("textarea").addClass("bg-danger");
     } 
-    if (a < 10) {
+    else if (a < 10) {
         $("#tenAm").siblings("textarea").addClass("bg-success");
     }
     else
         $("#tenAm").siblings("textarea").addClass("bg-dark");
     
     
-if (a = moment().hours(11)) {
+if (a === 11) {
         $("#elevenAm").siblings("textarea").addClass("bg-danger");
     } 
-    if (a < moment().hours(11)) {
-        $("#elevenAm").siblings("textarea").addClass("bg-dark");
+    else if (a < 11) {
+        $("#elevenAm").siblings("textarea").addClass("bg-success");
     }
-    else if (a > moment().hours(11)) {
-        $("#elevenAm").siblings("textarea").addClass("bg-success")
-    };
+    else 
+        $("#elevenAm").siblings("textarea").addClass("bg-dark");
     
-if (a = moment().hours(12)) {
+if (a === 12) {
         $("#twelvePm").siblings("textarea").addClass("bg-danger");
     } 
-    if (a < moment().hours(12)) {
-        $("#twelvePm").siblings("textarea").addClass("bg-dark");
+    else if (a < 12) {
+        $("#twelvePm").siblings("textarea").addClass("bg-success");
     }
-    else if (a > moment().hours(12)) {
-        $("#twelvePm").siblings("textarea").addClass("bg-success")
-    };
+    else 
+        $("#twelvePm").siblings("textarea").addClass("bg-dark");
     
-if (a = moment().hours(13)) {
+if (a === 13) {
         $("#onePm").siblings("textarea").addClass("bg-danger");
     } 
-    if (a < moment().hours(13)) {
-        $("#onePm").siblings("textarea").addClass("bg-dark");
+    else if (a < 13) {
+        $("#onePm").siblings("textarea").addClass("bg-success");
     }
-    else if (a > moment().hours(13)) {
-        $("#onePm").siblings("textarea").addClass("bg-success")
-    };
+    else  
+        $("#onePm").siblings("textarea").addClass("bg-dark");
     
-if (a = moment().hours(14)) {
+if (a === 14) {
         $("#twoPm").siblings("textarea").addClass("bg-danger");
     } 
-    if (a < moment().hours(14)) {
-        $("#twoPm").siblings("textarea").addClass("bg-dark");
+    else if (a < 14) {
+        $("#twoPm").siblings("textarea").addClass("bg-success");
     }
-    else if (a > moment().hours(14)) {
-        $("#twoPm").siblings("textarea").addClass("bg-success")
-    };
+    else 
+        $("#twoPm").siblings("textarea").addClass("bg-dark");
     
-if (a = moment().hours(15)) {
+if (a === 15) {
         $("#threePm").siblings("textarea").addClass("bg-danger");
     } 
-    if (a < moment().hours(15)) {
-        $("#threePm").siblings("textarea").addClass("bg-dark");
+    else if (a < 15) {
+        $("#threePm").siblings("textarea").addClass("bg-success");
     }
-    else if (a > moment().hours(15)) {
-        $("#threePm").siblings("textarea").addClass("bg-success")
-    };
+    else 
+        $("#threePm").siblings("textarea").addClass("bg-dark");
     
-if (a = moment().hours(16)) {
+if (a === 16) {
         $("#fourPm").siblings("textarea").addClass("bg-danger");
     } 
-    if (a < moment().hours(16)) {
-        $("#fourPm").siblings("textarea").addClass("bg-dark");
+    else if (a < 16) {
+        $("#fourPm").siblings("textarea").addClass("bg-success");
     }
-    else if (a > moment().hours(16)) {
-        $("#fourPm").siblings("textarea").addClass("bg-success")
-    };
+    else
+        $("#fourPm").siblings("textarea").addClass("bg-dark");
     
-if (a = moment().hours(17)) {
+if (a === 17) {
         $("#fivePm").siblings("textarea").addClass("bg-danger");
     } 
-    if (a < moment().hours(17)) {
-        $("#fivePm").siblings("textarea").addClass("bg-dark");
+    else if (a < 17) {
+        $("#fivePm").siblings("textarea").addClass("bg-success");
     }
-    else if (a > moment().hours(17)) {
-        $("#fivePm").siblings("textarea").addClass("bg-success")
-    };
+    else 
+        $("#fivePm").siblings("textarea").addClass("bg-dark");
 };
 
 // when this button is clicked, the calendar will clear and the localStorage will be emptied
@@ -158,8 +153,10 @@ $("#currentDay").append("Today is " + moment().format("dddd, MMMM Do YYYY") + ".
 
 loadTasks();
 
+auditTasks();
+
 setInterval(function() {
     auditTasks();
-}, 100); 
+}, 300000); 
 
 
