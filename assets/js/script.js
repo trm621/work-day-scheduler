@@ -47,7 +47,7 @@ if (a === 8) {
         $("#eightAm").siblings("textarea").addClass("bg-success")
     }
     else
-        $("#eightAm").siblings("textarea").addClass("bg-dark");
+        $("#eightAm").siblings("textarea").addClass("bg-secondary");
         
 if (a === 9) {
         $("#nineAm").siblings("textarea").addClass("bg-danger");
@@ -56,7 +56,7 @@ if (a === 9) {
         $("#nineAm").siblings("textarea").addClass("bg-success");
     }
     else 
-        $("#nineAm").siblings("textarea").addClass("bg-dark");
+        $("#nineAm").siblings("textarea").addClass("bg-secondary");
     
 if (a === 10) {
         $("#tenAm").siblings("textarea").addClass("bg-danger");
@@ -65,7 +65,7 @@ if (a === 10) {
         $("#tenAm").siblings("textarea").addClass("bg-success");
     }
     else
-        $("#tenAm").siblings("textarea").addClass("bg-dark");
+        $("#tenAm").siblings("textarea").addClass("bg-secondary");
     
     
 if (a === 11) {
@@ -75,7 +75,7 @@ if (a === 11) {
         $("#elevenAm").siblings("textarea").addClass("bg-success");
     }
     else 
-        $("#elevenAm").siblings("textarea").addClass("bg-dark");
+        $("#elevenAm").siblings("textarea").addClass("bg-secondary");
     
 if (a === 12) {
         $("#twelvePm").siblings("textarea").addClass("bg-danger");
@@ -84,7 +84,7 @@ if (a === 12) {
         $("#twelvePm").siblings("textarea").addClass("bg-success");
     }
     else 
-        $("#twelvePm").siblings("textarea").addClass("bg-dark");
+        $("#twelvePm").siblings("textarea").addClass("bg-secondary");
     
 if (a === 13) {
         $("#onePm").siblings("textarea").addClass("bg-danger");
@@ -93,7 +93,7 @@ if (a === 13) {
         $("#onePm").siblings("textarea").addClass("bg-success");
     }
     else  
-        $("#onePm").siblings("textarea").addClass("bg-dark");
+        $("#onePm").siblings("textarea").addClass("bg-secondary");
     
 if (a === 14) {
         $("#twoPm").siblings("textarea").addClass("bg-danger");
@@ -102,7 +102,7 @@ if (a === 14) {
         $("#twoPm").siblings("textarea").addClass("bg-success");
     }
     else 
-        $("#twoPm").siblings("textarea").addClass("bg-dark");
+        $("#twoPm").siblings("textarea").addClass("bg-secondary");
     
 if (a === 15) {
         $("#threePm").siblings("textarea").addClass("bg-danger");
@@ -111,7 +111,7 @@ if (a === 15) {
         $("#threePm").siblings("textarea").addClass("bg-success");
     }
     else 
-        $("#threePm").siblings("textarea").addClass("bg-dark");
+        $("#threePm").siblings("textarea").addClass("bg-secondary");
     
 if (a === 16) {
         $("#fourPm").siblings("textarea").addClass("bg-danger");
@@ -120,7 +120,7 @@ if (a === 16) {
         $("#fourPm").siblings("textarea").addClass("bg-success");
     }
     else
-        $("#fourPm").siblings("textarea").addClass("bg-dark");
+        $("#fourPm").siblings("textarea").addClass("bg-secondary");
     
 if (a === 17) {
         $("#fivePm").siblings("textarea").addClass("bg-danger");
@@ -129,7 +129,7 @@ if (a === 17) {
         $("#fivePm").siblings("textarea").addClass("bg-success");
     }
     else 
-        $("#fivePm").siblings("textarea").addClass("bg-dark");
+        $("#fivePm").siblings("textarea").addClass("bg-secondary");
 };
 
 // when this button is clicked, the calendar will clear and the localStorage will be emptied
