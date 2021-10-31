@@ -152,8 +152,9 @@ $(".save-button").on("click", function() {
 $("#currentDay").append("Today is " + moment().format("dddd, MMMM Do YYYY") + ".");
 
 loadTasks();
-
 auditTasks();
+
+// will perform the auditTasks function every five minutes
 
 setInterval(function() {
     auditTasks();
